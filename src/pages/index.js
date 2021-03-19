@@ -1,10 +1,12 @@
 import React from 'react'
+import { Heading } from '@chakra-ui/react'
+import Layout from '../components/Layout'
 
 const Home = () => {
   return (
-    <div>
-
-    </div>
+    <Layout>
+      <Heading as="h1">Chakra UI</Heading>
+    </Layout>
   )
 }
 
