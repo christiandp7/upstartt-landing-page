@@ -15,37 +15,40 @@ import {
 import {
   SunIcon
 } from '@chakra-ui/icons';
+import Sticky from 'react-stickynode';
+
+import styles from './styles';
 
 // assets
 import { LogoWhite } from '../../svg/Logo';
 
 const Header = () => {
   return (
-    <Box>
-      <Container maxW="container.xl" py={5}>
-        <Flex
-          alignItems="center"
-          justifyContent="space-between"
-          py={{ base: 2 }}
-        >
+    <Box sx={styles.headerWrapper}>
+      <Sticky enabled={true} top={0} activeClass="is-sticky" innerZ={10}>
+        <Box as="header">
+          <Container maxW="container.xl">
+            <Flex
+              alignItems="center"
+              justifyContent="space-between"
+              py={{ base: 2 }}
+            >
 
-          <LogoNav />
-          <DesktopNav />
-          <ActionButtons />
+              <LogoNav />
+              <DesktopNav />
+              <ActionButtons />
 
-        </Flex>
-      </Container>
+            </Flex>
+          </Container>
+        </Box>
+      </Sticky>
     </Box>
   )
 }
 
 const LogoNav = () => {
   return (
-    <Box
-      textAlign="center"
-      width="200px"
-      Logo
-    >
+    <Box className="logo_container" sx={styles.logo_container}>
       <LogoWhite />
     </Box >
 
@@ -59,10 +62,11 @@ const DesktopNav = () => {
         <Box key={navitem.label}>
           <Link
             href={navitem.href}
-            p={2}
+            mx={3}
+            sx={styles.links}
             _hover={{
               textDecoration: 'none',
-              color: useColorModeValue('gray.800', 'white'),
+              color: useColorModeValue('gray.200', 'white'),
             }}>
 
             {navitem.label}
@@ -82,6 +86,7 @@ const ActionButtons = () => {
       spacing={6}
     >
       <IconButton
+        color="white"
         aria-label="Dark Mode"
         icon={<SunIcon />}
         variant="ghost"
@@ -91,6 +96,7 @@ const ActionButtons = () => {
         fontSize={'sm'}
         fontWeight={400}
         variant={'link'}
+        color={'white'}
         href={'#'}>
         Sign In
           </Button>
@@ -109,6 +115,8 @@ const ActionButtons = () => {
     </Stack>
   )
 }
+
+
 
 const NAVITEMS = [
   {
