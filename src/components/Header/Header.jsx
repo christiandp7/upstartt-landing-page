@@ -20,12 +20,17 @@ import Sticky from 'react-stickynode';
 import styles from './styles';
 
 // assets
-import { LogoWhite } from '../../svg/Logo';
+import { LogoSVG } from '../../svg/Logo';
 
 const Header = () => {
+  const handleStickyChange = (status) => {
+    if (status.status === Sticky.STATUS_FIXED) {
+      console.log('the component is sticky');
+    }
+  }
   return (
     <Box sx={styles.headerWrapper}>
-      <Sticky enabled={true} top={0} activeClass="is-sticky" innerZ={10}>
+      <Sticky onStateChange={handleStickyChange} enabled={true} top={0} activeClass="is-sticky" innerZ={10}>
         <Box as="header">
           <Container maxW="container.xl">
             <Flex
@@ -49,7 +54,7 @@ const Header = () => {
 const LogoNav = () => {
   return (
     <Box className="logo_container" sx={styles.logo_container}>
-      <LogoWhite />
+      <LogoSVG />
     </Box >
 
   )
@@ -98,19 +103,19 @@ const ActionButtons = () => {
         variant={'link'}
         color={'white'}
         href={'#'}>
-        Sign In
+        Ingresar
           </Button>
       <Button
         display={{ base: 'none', md: 'inline-flex' }}
         fontSize={'sm'}
         fontWeight={600}
         color={'white'}
-        bg={'purple.500'}
+        bg={'upstt_gray.500'}
         href={'#'}
         _hover={{
-          bg: 'purple.600',
+          bg: 'gray.800',
         }}>
-        Sign Up
+        Postula ahora
           </Button>
     </Stack>
   )
@@ -120,15 +125,15 @@ const ActionButtons = () => {
 
 const NAVITEMS = [
   {
-    label: "home",
+    label: "¿Por qué?",
     href: "#"
   },
   {
-    label: "about",
+    label: "Cómo funciona?",
     href: "#"
   },
   {
-    label: "contact",
+    label: "Proceso",
     href: "#"
   },
 ]

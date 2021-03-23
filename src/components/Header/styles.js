@@ -2,9 +2,10 @@ export default {
   headerWrapper: {
     header: {
       position: 'fixed',
-      backgroundColor: 'purple.600',
+      // backgroundColor: 'upstt_purple.500',
       left: 0,
       right: 0,
+      mt: '15px',
       // py: 20,
       transition: 'all 0.3s ease-in-out 0s',
       '&.is-mobile-menu': {
@@ -15,15 +16,35 @@ export default {
       header: {
         backgroundColor: 'white',
         boxShadow: '0 6px 13px rgba(38,78,118,0.1)',
+        mt: '0',
+        // boxShadow: "base",
       },
     },
   },
   logo_container: {
-    height: '70px',
-    transition: 'all 0.3s ease-in-out 0s',
+    width: '200px',
+    py: 2,
+    // transition: 'all 0.3s ease-in-out 0s',
+    svg: {
+      transition: 'all 0.3s ease-in-out 0s',
+      width: '160px',
+      height: 'auto',
+      path: {
+        fill: 'white'
+      },
+    },
     '.is-sticky &': {
-      height: '55px',
-    }
+      py: 1,
+      svg: {
+        width: '130px',
+        '.logo_arc': {
+          fill: 'upstt_purple.500',
+        },
+        path: {
+          fill: 'gray.900'
+        },
+      },
+    },
   },
   links: {
     color: 'white',
@@ -32,7 +53,7 @@ export default {
     '.is-sticky &': {
       color: 'gray.700',
       _hover: {
-        color: 'purple.600'
+        color: 'upstt_purple.500'
       }
     }
   }
