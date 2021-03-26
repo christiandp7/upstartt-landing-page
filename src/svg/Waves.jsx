@@ -16,3 +16,12 @@ export const Wave1 = () => {
 
   )
 }
+
+
+export const Wave2 = () => (
+  <svg width="100%" height="auto" viewBox="0 0 1440 392" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path stroke="white" d="M745.052 159.693C423.332 483.057 108.894 285.779 0 159.523V391.5H1440V159.693C1300.5 69 1052.19 -149.017 745.052 159.693Z" fill="white" />
+  </svg>
+
+
+)

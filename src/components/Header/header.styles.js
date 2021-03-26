@@ -56,5 +56,43 @@ export default {
         color: 'upstt_purple.500'
       }
     }
+  },
+  signIn: {
+    _hover: {
+      textDecoration: 'none'
+    },
+    '.is-sticky &': {
+      color: 'gray.700',
+      _hover: {
+        color: 'upstt_purple.500'
+      }
+    }
+  },
+  themeSwitch: {
+    _hover: {
+      color: 'gray.200'
+    },
+    '.is-sticky &': {
+      color: 'gray.700',
+      _hover: {
+        color: 'upstt_purple.500'
+      }
+    }
+  },
+  ctaHeader: {
+    borderColor: 'upstt_gray.500',
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    '.is-sticky &': {
+      color: 'white',
+      bg: 'upstt_purple.500',
+      borderColor: 'upstt_purple.500',
+      borderWidth: '1px',
+      borderStyle: 'solid',
+      _hover: {
+        bg: 'transparent',
+        color: 'upstt_purple.500'
+      }
+    }
   }
 }

@@ -17,7 +17,7 @@ import {
 } from '@chakra-ui/icons';
 import Sticky from 'react-stickynode';
 
-import styles from './styles';
+import styles from './header.styles';
 
 // assets
 import { LogoSVG } from '../../svg/Logo';
@@ -95,6 +95,7 @@ const ActionButtons = () => {
         aria-label="Dark Mode"
         icon={<SunIcon />}
         variant="ghost"
+        sx={styles.themeSwitch}
       />
       <Button
         as={'a'}
@@ -102,6 +103,7 @@ const ActionButtons = () => {
         fontWeight={400}
         variant={'link'}
         color={'white'}
+        sx={styles.signIn}
         href={'#'}>
         Ingresar
           </Button>
@@ -114,7 +116,9 @@ const ActionButtons = () => {
         href={'#'}
         _hover={{
           bg: 'gray.800',
-        }}>
+        }}
+        sx={styles.ctaHeader}
+      >
         Postula ahora
           </Button>
     </Stack>
