@@ -8,8 +8,8 @@ export default {
     },
   },
   fonts: {
-    body: "system-ui, sans-serif",
-    heading: "Georgia, serif",
+    body: "Montserrat, sans-serif",
+    heading: "Montserrat, sans-serif",
     mono: "Menlo, monospace",
   },
 }
